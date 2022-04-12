@@ -101,23 +101,5 @@
         
     </div>
 </body>
-<script>
-  function getRandomColor() {
-      var letters = '0123456789ABCDEF';
-      var color = '#';
-      for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-  }
 
-  function changeBackground() {
-      
-          console.log("start");
-          console.log("radial-gradient(" + getRandomColor() + ", " + getRandomColor() + ");")
-          var b = document.getElementsByTagName("body")[0];
-          b.style = "background-image: radial-gradient(" + getRandomColor() + ", " + getRandomColor() + ");";
-  }
-  setInterval(changeBackground,1)
-</script>
 </html>
