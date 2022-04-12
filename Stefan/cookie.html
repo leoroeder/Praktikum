@@ -9,20 +9,27 @@
 </head>
 <body>
     <nav>
-        <a href="cookie.html" class="brand"><p>Useless Websites</p></a>
+        <a href="index.html" class="brand"><p>Useless Websites</p></a>
         <ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="discover.html">Discover</a>
             <a href="cookie.html" class="active">Cookie</a>
+            <a href="404.html">???</a>
         </ul>
     </nav>
     <header>
         <div class="textbox">
             <div class="cheatbox">
-                <button onclick="cheatCookies()">Cheat + 1000</button>
+                <!-- <button onclick="cheatCookies()">Cheat + 10</button> -->
             </div>
             <h1>score: 0</h1>
             <!-- <img class="cookie" onclick="cookieAdd()" src="https://media.istockphoto.com/photos/chocolate-chip-cookie-isolated-picture-id517109442?b=1&k=20&m=517109442&s=170667a&w=0&h=3XSUu_Xhzww9oo2h9HHBevZHDLDkRvn8py8r86q6ers=" alt=""> -->
             <div class="cookieBox">
-                <img class="cookie" onclick="cookieAdd()" src="cookie.png" alt="">
+                <div class="crazy">
+                    
+                </div>
+                <img class="cookie" onclick="clickCookie()" src="cookie.png" alt="">
             </div>
             <span class="booster">
                 <button class="booster1 grey" onclick="buyBooster1()">Sklave (0) - 50 Cookies</button>
@@ -33,6 +40,32 @@
     </header>
 
     <script>
+        loopingCookie = false;
+        function loopCookie() {
+            loopingCookie = true;
+            setTimeout(() => {
+                var div = document.createElement('h5');
+                div.innerHTML = 'RGB Cookie';
+                document.querySelector('.cookieBox .crazy').appendChild(div);
+                loopCookie();
+            }, 1200);
+        }
+
+        function rgbText() {
+            var div = document.createElement('h4');
+            div.innerHTML = 'RGB Cookie';
+            document.querySelector('.cookieBox .crazy').appendChild(div);
+        }
+
+        function clickCookie() {
+            var el = document.createElement('h4');
+            el.innerHTML = 'coookie!';
+            document.querySelector('.cookieBox .crazy').appendChild(el);
+            el.style.marginLeft = (Math.floor(Math.random() * 400) - 200) + 'px';
+            el.style.marginTop = (Math.floor(Math.random() * 400) - 200) + 'px';
+            cookieAdd();
+        }
+        
         cookieScore = 0;
         booster1Score = 0;
         booster2Score = 0;
@@ -42,7 +75,11 @@
             cookieScore++;
             document.querySelector('header h1').innerHTML = 'score: ' + cookieScore;
             if(cookieScore >= 50) {
+                document.querySelector('.cookie').classList.add('goCrazy');
                 document.querySelector('.booster1').classList.add('buyable');
+                if(!loopingCookie) {
+                    loopCookie();
+                }
                 if(cookieScore >= 1500) {
                     document.querySelector('.booster2').classList.add('buyable');
                     if(cookieScore >= 20000) {
@@ -108,15 +145,21 @@
         }
 
         function cheatCookies() {
-            for(i = 0; i < 1000; i++) {
+            for(i = 0; i < 10; i++) {
                 cookieAdd();
             }
         }
 
+        function cheatCookies1() {
+            for(i = 0; i < 1000; i++) {
+                cookieAdd();
+            }
+}
+
         document.onkeydown = function(evt) {
             evt = evt || window.event;
             if (evt.ctrlKey && evt.keyCode == 90) {
-                cheatCookies();
+                cheatCookies1();
             }
         };
     </script>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useless Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="brand"><p>Useless Websites</p></a>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="discover.html" class="active">Discover</a>
+            <a href="cookie.html">Cookie</a>
+            <a href="404.html">???</a>
+        </ul>
+    </nav>
+
+    <table id="discover-table">
+        <tr>
+            <td>
+                <iframe src="https://hooooooooo.com/" scrolling="no" frameborder="0"></iframe>
+            </td>
+            <td>
+                <h2>heeeeeeeey / hooooooooo</h2>
+                <p>du kannst hier zusehen wie zwischen den Seiten https://hooooooooo.com/ und https://heeeeeeeey.com/ gewechselt wird</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <iframe src="http://make-everything-ok.com/" scrolling="no" frameborder="0"></iframe>
+            </td>
+            <td>
+                <h2>Make everything OK</h2>
+                <p>hast du einen Fehler gemacht?<br>Kein Problem. Das passiert auch den Besten. Mach ihn einfach wieder gut!</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>ich muss dich bitten die Kraft Seite selbst zu spüren</h2>
+                <p><a href="http://www.donothingfor2minutes.com/">http://www.donothingfor2minutes.com/</a></p>
+            </td>
+            <td>
+                <h2>Do Nothing for 2 Minutes</h2>
+                <p>Absolute Konzentration!<br>Entspanne dich und lege Hände weg von Maus und Tastatur</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>ein Klassiker für zwischendurch</h2>
+                <p><a href="https://pixelsfighting.com/">https://pixelsfighting.com/</a></p>
+            </td>
+            <td>
+                <h2>Pixels Fighting</h2>
+                <p>besuche auch gerne den shop</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>auch diese Seite muss im Vollbild betrachtet werden</h2>
+                <p><a href="https://fallingguy.com/">https://fallingguy.com/</a></p>
+            </td>
+            <td>
+                <h2>Fallin Guy</h2>
+                <p>Scrolle dich nach der Meditation einmal richtig aus</p>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function changeBackground() {
+    console.log("start");
+    console.log("radial-gradient(" + getRandomColor() + ", " + getRandomColor() + ");")
+    var b = document.getElementsByTagName("body")[0];
+    b.style = "background-image: radial-gradient(" + getRandomColor() + ", " + getRandomColor() + "); color: " + getRandomColor() + "";
+}
+setInterval(changeBackground,1);</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Useless Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="brand"><p>Useless Websites</p></a>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="discover.html">Discover</a>
+            <a href="cookie.html">Cookie</a>
+            <a href="404.html" class="active">???</a>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="textbox error404">
+            <h1>Error <span class="error1">4</span><span class="error2">0</span><span class="error3">4</span></h1>
+            <p>Seite leider noch nicht fertig :(</p>
+        </div>
+    </header>
+
+    <script>
+        window.onload = function load() {
+            errorLoop();
+        }
+        
+        function errorLoop() {
+            setTimeout(() => {
+                document.querySelector('.textbox.error404 .error1').style.color = 'rgba(0,0,0,0.3)';
+                document.querySelector('.textbox.error404 .error2').style.color = 'rgba(0,0,0,1)';
+                document.querySelector('.textbox.error404 .error3').style.color = 'rgba(0,0,0,1)';
+            printMessage();
+            }, 750);
+            setTimeout(() => {
+                document.querySelector('.textbox.error404 .error1').style.color = 'rgba(0,0,0,1)';
+                document.querySelector('.textbox.error404 .error2').style.color = 'rgba(0,0,0,0.3)';
+                document.querySelector('.textbox.error404 .error3').style.color = 'rgba(0,0,0,1)';
+            }, 1500);
+            setTimeout(() => {
+                document.querySelector('.textbox.error404 .error1').style.color = 'rgba(0,0,0,1)';
+                document.querySelector('.textbox.error404 .error2').style.color = 'rgba(0,0,0,1)';
+                document.querySelector('.textbox.error404 .error3').style.color = 'rgba(0,0,0,0.3)';
+                errorLoop()
+            }, 2250);
+
+            function printMessage() {
+                var str = 'Seite leider noch nicht fertig :(';
+                var out = '';
+                for(var i = 0; i < str.length; i++){
+                    out += str[i];
+                    print(out, 50*i)
+                }
+            }
+
+            function print(message, delay) {
+                setTimeout(() => {
+                    document.querySelector('.textbox p').innerHTML = message;
+                }, delay);
+            }
+        }
+    </script>
+
+</body>
+<script>function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+function changeBackground() {
+    console.log("start");
+    console.log("radial-gradient(" + getRandomColor() + ", " + getRandomColor() + ");")
+    var b = document.getElementsByTagName("body")[0];
+    b.style = "background-image: radial-gradient(" + getRandomColor() + ", " + getRandomColor() + "); color: " + getRandomColor() + "";
+}
+setInterval(changeBackground,1);</script>
+</html>

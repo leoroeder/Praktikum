@@ -18,6 +18,7 @@ body{
     align-items: center;
     
     font-family: 'Dongle', 'Sans Serif';
+    overflow: hidden;
 }
 nav{
     width: 100vw;
@@ -195,6 +196,25 @@ img.cookie{
     cursor: pointer;
     transition: all 0.3s;
 }
+img.cookie.goCrazy{
+    animation: rgb 1s linear infinite;
+    transform: scale(3);
+}
+@keyframes rgb {
+    0%{
+        filter: hue-rotate(0deg) contrast(2);
+    }
+    33%{
+        filter: hue-rotate(120deg) contrast(2);
+    }
+    67%{
+        filter: hue-rotate(240deg) contrast(2);
+    }
+    100%{
+        filter: hue-rotate(0deg) contrast(2);
+    }
+}
+
 .cookieBox{
     animation: rotateCookie 5s linear infinite;
 }
@@ -203,6 +223,39 @@ img.cookie:active{
 }
 span.booster{
     margin-top: 30px;
+}
+.cookieBox h4{
+    z-index: 30;
+    position: absolute;
+    font-size: 100px;
+    font-weight: bold;
+    margin-top: 120px;
+    animation: rotateCookie 2s infinite reverse, growText 30s infinite;
+    color: red;
+    pointer-events: none;
+}
+.cookieBox h5{
+    z-index: 30;
+    position: absolute;
+    font-size: 160px;
+    font-weight: bold;
+    margin-top: 120px;
+    animation: rotateCookie 1s infinite reverse, growText 30s infinite;
+    color: red;
+    pointer-events: none;
+}
+
+@keyframes growText {
+    0%{
+        transform: scale(1);
+    }
+    6%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(100);
+    }
 }
 
 @keyframes rotateCookie {
@@ -215,6 +268,7 @@ span.booster{
 }
 
 span.booster .grey{
+    animation: nothing 1s infinite;
     background-color: #999;
 }
 span.booster .buyable{
@@ -234,6 +288,12 @@ span.booster .buyable{
     }
     100%{
 
+    }
+}
+
+@keyframes nothing {
+    0%{
+        transform: scale(1);
     }
 }
 
