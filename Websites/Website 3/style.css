@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Lato:ital,wght@1,300&display=swap');
+
+*{
+    font-family: 'Grape Nuts', cursive;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav{
+    background-color: white;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    
+    list-style: none;
+    width: 50%;
+}
+nav img{
+    height: 60px;
+    margin-right: 30px;
+}
+nav div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    
+}
+p{
+    color: black;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: row;
+    
+    
+}
+main img{
+    height: 370px;
+    width: 400px;
+    
+   
+}
+
+
+
+
+header{
+    height: 60vh;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0,75);
+    background-image: url('kumulus-cumulus-wolke-wetter-100__v-img__16__9__l_-1dc0e8f74459dd04c91a0d45af4972b9069f1135.jpg');
+    background-size: cover;
+    background-position: center;
+
+    background-blend-mode: darken;
+}
+header{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+
+    height: 70px;
+    width: 100%;
+    background-color: rgb(0, 248, 207);
+
+}
+.kaufen{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    color: red;
+    
+}
+
+    
+
+
+
+
+
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    color: blue;
+    height: 50%;
+    bottom: 50%;
+} */

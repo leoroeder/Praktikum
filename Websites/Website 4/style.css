@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+/* Alle elemtente von der Seite */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Grape Nuts', cursive;
+}
+
+body{
+    background: rgb(255, 255, 255);
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav{
+    background-color: white;
+    width: 100vw;
+    height: 75px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    list-style: none;
+    width: 600px;
+    
+}
+nav img{
+    height: 40px;
+    margin-right: 30px;
+}
+div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+div p{
+    color: black;
+}
+.search{
+    height:20px;
+}
+header{
+    height: 60vh;
+    width: 100%;
+
+    background-color: rgb(255, 255, 255);
+
+    background-image: url(GG.jfif);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+   
+}
+header h1{
+    color: rgb(255, 255, 255);
+}
+
+main{
+    height: 60vh;
+    width: 100%;
+    background-color: white;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.Baum{
+    background-color: aqua;
+    height: 250px;
+    width: 33%;
+
+    background-image: url(BA.jfif);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}    
+.Fluss{
+    background-color: aqua;
+    height: 250px;
+    width: 33%;
+
+    background-image: url(FL.jfif);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.Stein{
+    background-color: aqua;
+    height: 250px;
+    width: 33%;
+
+    background-image: url(ST.jfif);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.Baum p{
+    color: rgb(255, 255, 255)
+}
+.Fluss p{
+    color: rgb(255, 255, 255)
+}
+.Stein p{
+    color: rgb(255, 255, 255)
+}
+footer{
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
